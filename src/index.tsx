@@ -1,5 +1,9 @@
 import { render } from 'react-dom'
-
+import { MoviesContextProvider } from './hooks/movies/index'
 import { App } from './App'
 
-render(<App />, document.getElementById('root'))
+render(
+  <MoviesContextProvider>
+    <App />
+  </MoviesContextProvider>,
+document.getElementById('root'))
